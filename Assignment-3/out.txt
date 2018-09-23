@@ -1,0 +1,96 @@
+     Compilation successful.
+Parent Node 60( program ) : 
+Children Node : 
+	50 (statement) 
+
+
+Parent Node 50( statement ) : 
+Children Node : 
+	40 (construct) 
+	111 (DELIMITER) 
+
+
+Parent Node 40( construct ) : 
+Children Node : 
+	30 (scheduler_construct) 
+
+
+Parent Node 30( scheduler_construct ) : 
+Children Node : 
+	10 (mutable) 
+	21 (ARITHMETIC) 
+	31 (CONSTRUCTOR) 
+	41 (DELIMITER) 
+	51 (CONSTRUCTOR) 
+	61 (ARITHMETIC) 
+	71 (DQ) 
+	20 (mutable) 
+	91 (DQ) 
+	101 (DELIMITER) 
+
+
+Parent Node 10( mutable ) : 
+Children Node : 
+	11 (IDENTIFIER) 
+
+
+Parent Node 11( IDENTIFIER ) : 
+Children Node : 
+	sche1
+
+
+Parent Node 21( ARITHMETIC ) : 
+Children Node : 
+	=
+
+
+Parent Node 31( CONSTRUCTOR ) : 
+Children Node : 
+	SCHEDULER
+
+
+Parent Node 41( DELIMITER ) : 
+Children Node : 
+	(
+
+
+Parent Node 51( CONSTRUCTOR ) : 
+Children Node : 
+	processor
+
+
+Parent Node 61( ARITHMETIC ) : 
+Children Node : 
+	=
+
+
+Parent Node 71( DQ ) : 
+Children Node : 
+	DQ
+
+
+Parent Node 20( mutable ) : 
+Children Node : 
+	81 (IDENTIFIER) 
+
+
+Parent Node 81( IDENTIFIER ) : 
+Children Node : 
+	proc1
+
+
+Parent Node 91( DQ ) : 
+Children Node : 
+	DQ
+
+
+Parent Node 101( DELIMITER ) : 
+Children Node : 
+	)
+
+
+Parent Node 111( DELIMITER ) : 
+Children Node : 
+	;
+
+
