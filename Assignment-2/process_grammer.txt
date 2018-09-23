@@ -1,0 +1,50 @@
+statement:	construct;
+			|function_call;
+
+construct:	process_construct
+			|job_construct
+			|memory_construct
+			|link_construct
+			|cluster_construct
+
+function_call:	process_call
+				|job_call
+				|memory_call
+				|link_call
+				|cluster_call
+
+process_construct:	process_object = process_definition
+process_definition:	Processor(parameters_process_def)
+parameters_process_def:	isa="isa_value", clock_speed:clock_value, l1_memory = l1_value MEMORY_OPTIONAL_L2 NAME_OPTIONAL
+MEMORY_OPTIONAL_L2: 
+					|,l2_memory=l1_value
+NAME_OPTIONAL:	
+				|,name = name_value
+				
+process_object:ID
+isa_value:	ARM
+			|AMD
+			|CDC
+			|MIPS
+clock_value:ID
+l1_value:	memory_object
+			|memory_definition
+name_value:	ID
+
+
+process_call:	process_object.is_running()
+				|process_object.submit_jobs(param_process_submit_discard_jobs)
+				|process_object.get_clock_speed()
+				|run(param_runProcess)
+				|process_object.discard_jobs(param_process_submit_discard_jobs)
+param_process_submit_discard_jobs:	job_object
+									|[job_lists]
+job_lists:	job_object,job_lists
+			|job_object
+
+param_runProcess:process_object|[process_lists]
+process_lists:	process_object,process_lists
+				|process_object				
+### 
+
+

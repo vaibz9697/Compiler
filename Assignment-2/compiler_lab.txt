@@ -1,0 +1,39 @@
+### Memory function 
+
+memory_construct:	memory_object = memory_definition
+memory_definition:	Memory(parameters_memory_def)
+parameters_memory_def:	memory_typeNT, mem_sizeNT Name_optional
+memory_typeNT : "mem_value"| memory_type="mem_value"
+
+mem_sizeNT : mem_size_value | mem_size = mem_size_value
+
+Name_optional :  |,name = "name_value" | ,"name_value"
+
+mem_value:primary
+		  |secondary
+		  |cache 
+
+mem_size_value: ID 
+name_value:ID 
+
+memory_call:memory_object.get_available_memory()
+
+## LINK FUNCTION
+
+link_construct:	link_object = link_definition
+link_definition:	Link(parameters_Link_def)
+parameter_Link_def : start_pointNT , end_pointNT, bandwitdthNT , channel_capacityNT nameNT
+
+start_pointNT : "start_value" |  start_point = "start_value"
+start_value : ID
+
+end_pointNT : "end_value" | end_point = "end_value"
+end_value : ID 
+
+bandwidthNT : bandwidth_value | bandwitdth =bandwidth_value
+bandwidth_value : ID 
+
+channel_capacityNT : channel_capacity_value | channel_capacity =channel_capacity_value     
+
+nameNT: |"name" | name_value : "name"
+name: ID 
